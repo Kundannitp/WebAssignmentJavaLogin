@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<style type="text/css">
+		.input1{
+			margin-left: 17px;
+			border-radius: 10px;
+		}
+		.input2{
+			margin-left: 10px;
+			border-radius: 10px;
+		}
+		input{
+			border:solid 1px;
+		}
+		#btn{
+			background-color: #de356a;
+			border-radius: 10px;
+			width: 75px;
+			border-width: 0px;
+			font-size: 20px;
+			margin: 20px 20px;
+		}
+		form{
+			margin-top: 75px;
+			margin-left: 100px;
+		}
+		fieldset{
+			border-radius: 20px;
+			background-color: #fae3d9;
+			border-width: 5px;
+			border-color: black;
+			width: 400px;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="sisyphus.min.js"></script>
+	<script>
+		$( function() {
+		//$( "#form2" ).sisyphus(); //Autosave form2 only,
+		// or you can persist all forms data at one command
+ 		$( "form" ).sisyphus();
+	} );
+	</script>
+</head>
+<body>
+<div>
+	<form action="LoginServelet" method="POST" style="line-height: 35px;">
+		<fieldset>
+			<h4 style="text-align: center; background-color: #8ac6d1; border-radius: 10px;">Login</h4>
+			UserName:<input type="text" name="Username" class="input2"><br>
+			Password:<input type="password" name="password" class="input1"><br>
+			<div style="text-align: center;">
+			<input type="submit" value="Login" id="btn">
+		</div>
+		</fieldset>
+	</form>
+</div>
+</body>
+</html>
